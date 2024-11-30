@@ -1,0 +1,79 @@
+
+        <link rel='stylesheet' type='text/css' href='styles.css'>
+        <link rel='stylesheet' type='text/css' href='styles.css'><h3>三号标题</h3>
+<p><strong>加粗字体</strong></p>
+<p><em>斜体</em></p>
+<p>emoji:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">😊</th>
+<th style="text-align: center;">🥰</th>
+<th style="text-align: center;">🥶</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">💩</td>
+<td style="text-align: center;">👉</td>
+<td style="text-align: center;">🤡</td>
+</tr>
+</tbody>
+</table>
+<p><img alt="图片" src="https://cityu.edu.mo/wp-content/themes/cityu/images/header/logo.png" /></p>
+<p>python:</p>
+<pre><code class="language-python">def dfs(x):
+    if x==n: #传递到了第n位，输出
+        print(lis_a)
+        print(&quot;\n&quot;)
+    else:
+        for i in range(n):#检索每一个数字是否被放进去了
+            if lis_b[i]==0:#如果没放进去
+                lis_b[i]=1 #记录在案
+                lis_a[x]=i+1 #把这个数字写进list里面
+                dfs(x+1)#对下一个位置做同样的操作
+
+                lis_a[x]=0#回到这个位置把这个位置清除
+                lis_b[i]=0#放进去的数被吐出来了所以将档案清空
+n=int(input())
+lis_b=[0]*n#创立一个全是数字0，长度为n的列表
+lis_a=[0]*n
+dfs(0)
+</code></pre>
+<p>c++:</p>
+<pre><code class="language-cpp">
+#include&lt;cstdio&gt;
+#include&lt;cstring&gt;
+int a[10000];
+int b[10000];
+int n;
+void dfs(int x)
+{
+    if(x==n+1)
+    {
+        for(int i=1;i&lt;=n;i++)printf(&quot;%5d&quot;,a[i]);
+        printf(&quot;\n&quot;);
+    }
+    else
+    {
+        for(int i=1;i&lt;=n;i++)
+        {
+            if(b[i]==0)
+            {
+                b[i]=1;
+                a[x]=i;
+                dfs(x+1);
+                b[i]=0;
+                a[x]=0; 
+            }
+        }
+    }
+}
+int main()
+{
+    scanf(&quot;%d&quot;,&amp;n);
+    memset(b,0,sizeof(b));
+    dfs(1);
+}
+</code></pre>
+        

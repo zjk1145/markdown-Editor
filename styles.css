@@ -1,0 +1,28 @@
+pre {
+        background-color: #f0f0f0;
+                padding: 10px;
+                border-radius: 5px;
+                overflow: auto;
+    }
+.language-python{
+        color: darkblue;
+        font-family: 'Courier New', Courier, monospace;       
+        background-color: rgb(183, 175, 175);
+}
+.language-cpp{
+        color: green;
+        font-family: 'Courier New', Courier, monospace;
+        background-color: rgb(183, 175, 175)y;
+}
+.language-html{
+        color: darkturquoise;
+        background-color: rgb(183, 175, 175);
+}
+.language-javascript{
+        color: darkorange;
+        background-color: rgb(183, 175, 175);
+}
+.language-css{
+        color: purple;
+        background-color: rgb(183, 175, 175);
+}
